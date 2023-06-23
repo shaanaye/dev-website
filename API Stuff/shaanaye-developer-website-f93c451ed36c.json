@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "shaanaye-developer-website",
+  "private_key_id": "f93c451ed36cdae276bba7973b3e63c3b9075d55",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCvvhXVQGtRY625\npvD7g2ShYV44AIfqlkmWo0vJnkNNpLbMJEscOEnhRPh5b1jEjeFzJyhbP0MZt8E8\nkS9iDLwaAG6DZLcYZRnxmhQYNRNjK6bAvcEhvMWyOpEbflHP1yiASirOZScp7hxg\nZxvZ194hAbkQtzTJvrxjUTlSQxQ/MXMfYjpIptxuEVe1xU+tSvCiw5lqoPvtTRM8\nvn4pXktKmk9y0FnwNR0ogAsKka8QOIH1YWnCA8/rFHZMt3Bl8RigRoMbLrQo6jmQ\nU/kQ25cJBrOUXe3YtYvIF/qcmLYDdACjGkJtmqmmFjSEQjTVVVg+FTcoFLgDTX1/\n4cNASzd9AgMBAAECggEAGy8ACeIy12jfhy8l6QRBbV72EnEulOArQM7rGvl3zUuU\nROO7mdaxGCmxdM3ULA8K144v2rFgi9qrBqx/E5+xps9N84ABfEIDLyZXQ7P4rDx6\nc3zGd2qkz8qUWxgrx8Yu9cJtzaAYMeRVZP9TRQZ0Ivnfv5CpwdJW1IFMqFyc20s6\nUs10qB6sksJmw5g9FGTlDVyMLLzKPszfssVjp9jqH1HOrXQbfmLwFNaN4NNeSyuU\nEq748skTtMZ4RVhunMgzHjlp4MQ69x/lmPwVo5OvyyknX5xekJQWsO4y07yOZQ2j\nckFSvJQRK7mrqRIpzCiTXhjTKWHNj6qjlw3v4zLM1wKBgQDsfIYOR6jWOyNc/Nxj\nNMAxX2r8Fzt3tzMyM+7KllXAG+BBhmljl9PzvvT61Ju9roUve8AsB9V7cftut4PN\nnmqhu+Fi+sOauNIe7EqNm/ztr4HGy822L8SirZyDCcUd496C0Edmhx9nPTaGG9G3\n9X9qPdu8IHGbyq2lFxufLHFHpwKBgQC+PmxyXwLysCETQ8M1DxrITCHDR2kPkR3E\npDlY+auw71m1LyHBkLsAlTYxcGu5Aqp9aYm2zJYEbD9mvBH+snXHTTNtkywV9N9n\nc916xM1E7r1qmCzuwh+aFImw5HdJ+1PNfAho0nbsEH16I7hq5wpUjBUiVX2eVS5g\n7fkzcwksOwKBgAsiufVGLo8X7cxdI8uQGlS414LTXTt/5utAQshLV/JZ3a94MtI7\nvgFGRqbhCAxggWkA/MWWANl1Po+yGITAJulCvZQ5lqhcd5h5K/GLHNfcYdIImsEv\ncqTuY+ZPuXZ02m9ye0o6pqHn4f9io/dzmfJYw1YSeQcK/i497lEKeLMVAoGBAJ4q\n2hDwq0vIYYdZxDcd2r+ChGONwGxf0ycE/mTaFwOgy62WhPMgeEkQxSCvffAwpjxk\nfUmMqID+2mt4m2FtT/ymU8abIIEUuJSTQSVr79mKv9KauGi83ndE8gEuwXqxyMfD\ngl5b9OFpCFl+zzmZ4v3OBVgpSapU2Z1e3NwInSy3AoGAWmHtg9ekFty1lhi8jJ5L\nfWFyJbEYXilStcJvezJzQeEYxm2uJgNr1lN7k47GZF9fRsoEfoqLhvzF/cGdGprn\nnx5rxJuufYU56coaL+m9unYH1tm0bYHtHsQcjW5pIogdHbv5ss/zhgHNZ0OVxJMk\nQdAvDqcJEfFMoW0Nz0Vw4hI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "devweb@shaanaye-developer-website.iam.gserviceaccount.com",
+  "client_id": "111739156012480032092",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/devweb%40shaanaye-developer-website.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
