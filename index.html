@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html>
 <body>
-<head></head>
+<head>
+
+<script type="application/javascript">
+  function getIP(json){
+    document.write("IP: ", json.ip)
+  }
+</script>
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+</head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MG2R7Q69TP"></script>
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-MG2R7Q69TP"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-MG2R7Q69TP');
-</script>
+</script> -->
 <h1>hi </h1>
 <p>:^)!!!</p>
+<button type = "button" onclick = "geIP()">Get IP</button>
 </body>
 </html>
