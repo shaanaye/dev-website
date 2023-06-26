@@ -5,7 +5,7 @@
 
 <script type="application/javascript">
   function getIP(json){
-    document.write("IP: ", json.ip)
+    document.getElementById("ipaddress").innerHTML = "json.ip"
   }
 </script>
 <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
@@ -13,6 +13,7 @@
 <h1>hi </h1>
 <p>:^)!!!</p>
 <button type = "button" onclick = "geIP()">Get IP</button>
+<p id="ipaddress">IP: </p>
 </body>
 </html>
 
