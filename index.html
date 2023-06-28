@@ -6,22 +6,29 @@
         fetch('https://api.ipify.org?format=json')
           .then(response => response.json())
           .then(data => {
-            let ip = data.ip;
-            document.getElementById("result").innerHTML = ip;
+            var ip = data.ip;
+            document.getElementById("ip").innerHTML = ip;
+
+            return fetch('https://api.ipgeolocation.io/ipgeo?apiKey=1c67e9644f6743a3aa65bab9bc530eb6&ip='+ip)
+          })
+          .then(response => response.json())
+          .then(data=>{
+            var country = data.country_name;
+            var state = data.state_prov;
+            document.getElementById("country_name").innerHTML = country;
+            document.getElementById("state").innerHTML = state;
           })
           .catch(error => console.log(error));
-        
-        
-        
       }
     </script>
     <h1>hi</h1>
     <p>:^)!!!</p>
-    <p id="result"></p>
+    <p id="ip"></p>
+    <p id="country_name"></p>
+    <p id="state"></p>
     <button onclick="getIP()">Get IP</button>
   </body>
 </html>
-
 
 <!-- Google tag (gtag.js) -->
 <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-MG2R7Q69TP"></script>
