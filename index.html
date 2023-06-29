@@ -8,8 +8,7 @@
         button.classList.add("loading");
         button.disabled = true;
         button.innerHTML = "";
-        
-
+        //comment
         fetch('https://api.ipify.org?format=json')
           .then(response => response.json())
           .then(data => {
