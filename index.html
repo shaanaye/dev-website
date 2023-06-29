@@ -4,7 +4,6 @@
   <body style="background-color: #36454F;">
     <script type="application/javascript">
       function getIP() {
-        // Add the 'loading' class to the button when clicked
         var button = document.getElementById("getIPButton");
         button.classList.add("loading");
         button.disabled = true;
@@ -26,7 +25,6 @@
             document.getElementById("country_name").innerHTML = country;
             document.getElementById("state").innerHTML = state;
 
-            // Remove the 'loading' class from the button after code execution
             button.classList.remove("loading");
             button.disabled = false;
             button.innerHTML = "Get IP";
