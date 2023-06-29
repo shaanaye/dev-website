@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html>
+  <link rel="stylesheet" href="styles.css">
   <body style="background-color: #36454F;">
     <script type="application/javascript">
       function getIP() {
+        // Add the 'loading' class to the button when clicked
+        var button = document.getElementById("getIPButton");
+        button.classList.add("loading");
+        button.disabled = true;
+        button.innerHTML = "";
+        
+
         fetch('https://api.ipify.org?format=json')
           .then(response => response.json())
           .then(data => {
@@ -17,16 +25,21 @@
             var state = data.state_prov;
             document.getElementById("country_name").innerHTML = country;
             document.getElementById("state").innerHTML = state;
+
+            // Remove the 'loading' class from the button after code execution
+            button.classList.remove("loading");
+            button.disabled = false;
+            button.innerHTML = "Get IP";
           })
           .catch(error => console.log(error));
       }
     </script>
-    <h1>hi</h1>
-    <p>:^)!!!</p>
+    <div class="buttoncontainer">
+      <button id="getIPButton" class="button" onclick="getIP()">Get IP</button>
+    </div>
     <p id="ip"></p>
     <p id="country_name"></p>
     <p id="state"></p>
-    <button onclick="getIP()">Get IP</button>
   </body>
 </html>
 
