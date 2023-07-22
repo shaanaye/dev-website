@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="fingerprint.css">
+        <script type="application/javascript">
+        function sha256(data) {
+            const encoder = new TextEncoder();
+            const dataUint8Array = encoder.encode(data);
+
+            return crypto.subtle.digest('SHA-256', dataUint8Array)
+            .then(buffer => {
+                const hashArray = Array.from(new Uint8Array(buffer));
+                const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+                return hashHex;
+            });
+        }
+        var userAgent = navigator.userAgent;
+        var screen_height = window.screen.height;
+        var screen_width = window.screen.width;
+        var timeZone = new Date().getTimezoneOffset();
+        var userInformation = String(userAgent) + "|" + String(screen_width) + "|" + String(screen_height) + "|" + String(timeZone);
+        var userHash = sha256(userInformation);
+        sha256(userInformation)
+        .then(userHash =>{
+            console.log(userHash);
+        });
+
+        fetch('http://18.218.166.14:8000/insert_data', {
+            method : 'POST',
+            headers: {'Content-Type' : 'application/json'},
+            body : JSON.stringify({
+                userAgent : userAgent,
+                screen_height : screen_height,
+                screen_width : screen_width,
+                timeZone : timeZone,
+                userInformation, userInformation,
+                userHash : userHash
+            })
+
+        })
+        .then(res => console.log('sent data'))
+        .catch(error => console.log("error"))
+
+        </script>
+    </head>
+
+    <body class="background-color">
+    </body>
+</html> 
