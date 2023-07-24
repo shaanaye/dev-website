@@ -22,7 +22,7 @@
 
         let userHash;
         async function getHash() {
-            hash = await(sha256(userInformation));
+            userHash = await(sha256(userInformation));
         }
 
         console.log({
