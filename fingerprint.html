@@ -38,8 +38,9 @@
         })
         .then(response => console.log("Sent data"))
         .catch(error => console.log("Error " + error));
+
+        document.getElementById("tyMessage").innerHTML = "thank you!";
         }
-        userData();
 
 
 
@@ -78,6 +79,7 @@
     </head>
 
     <body class="background-color">
-        <p>hi</p>
+        <p id="tyMessage"></p>
+        <script>userData();</script>
     </body>
 </html> 
