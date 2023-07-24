@@ -14,19 +14,16 @@
                 return hashHex;
             });
         }
-        var userAgent = navigator.userAgent;
-        var screen_height = window.screen.height;
-        var screen_width = window.screen.width;
-        var timeZone = new Date().getTimezoneOffset();
-        var userInformation = String(userAgent) + "|" + String(screen_width) + "|" + String(screen_height) + "|" + String(timeZone);
 
-        let userHash;
-        async function getHash() {
-            userHash = await(sha256(userInformation));
-        }
-        getHash()
-        .then(() => console.log(userHash))
-        .then(await fetch('https://database.shaan.zip/', {
+        async function userData(){
+            var userAgent = navigator.userAgent;
+            var screen_height = window.screen.height;
+            var screen_width = window.screen.width;
+            var timeZone = new Date().getTimezoneOffset();
+            var userInformation = String(userAgent) + "|" + String(screen_width) + "|" + String(screen_height) + "|" + String(timeZone);
+
+            let userHash = await sha256(userInformation);
+            fetch('https://database.shaan.zip/', {
             method : 'POST',
             headers: {'Content-Type' : 'application/json'},
             body : JSON.stringify({
@@ -38,9 +35,31 @@
                 userInformation : userInformation,
             })
 
-        }))
+        })
         .then(response => console.log("Sent data"))
         .catch(error => console.log("Error " + error));
+        }
+
+
+        // let userHash;
+        // async function getHash() {
+        //     userHash = await(sha256(userInformation));
+        // }
+        // fetch('https://database.shaan.zip/', {
+        //     method : 'POST',
+        //     headers: {'Content-Type' : 'application/json'},
+        //     body : JSON.stringify({
+        //         userHash : userHash,
+        //         userAgent : userAgent,
+        //         screen_height : screen_height,
+        //         screen_width : screen_width,
+        //         timeZone : timeZone,
+        //         userInformation : userInformation,
+        //     })
+
+        // })
+        // .then(response => console.log("Sent data"))
+        // .catch(error => console.log("Error " + error));
 
         console.log({
         userHash : userHash,
