@@ -19,11 +19,11 @@
         var screen_width = window.screen.width;
         var timeZone = new Date().getTimezoneOffset();
         var userInformation = String(userAgent) + "|" + String(screen_width) + "|" + String(screen_height) + "|" + String(timeZone);
-        var userHash = sha256(userInformation);
         sha256(userInformation)
-        .then(userHash =>{
-            console.log(userHash);
+        .then(hash =>{
+            console.log(hash);
         });
+        var userHash = String(sha256(userInformation));
 
         console.log({
         userHash : userHash,
