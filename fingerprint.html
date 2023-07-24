@@ -24,6 +24,7 @@
         async function getHash() {
             userHash = await(sha256(userInformation));
         }
+        getHash();
 
         console.log({
         userHash : userHash,
