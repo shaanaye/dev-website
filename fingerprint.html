@@ -21,10 +21,9 @@
         var userInformation = String(userAgent) + "|" + String(screen_width) + "|" + String(screen_height) + "|" + String(timeZone);
         sha256(userInformation)
         .then(hash =>{
-            console.log(hash);
+            var userHash = hash;
         });
-        var userHash = String(sha256(userInformation));
-        console.log("USERHASH" + userHash)
+        console.log(userHash);
 
         console.log({
         userHash : userHash,
