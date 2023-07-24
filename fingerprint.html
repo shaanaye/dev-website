@@ -25,19 +25,8 @@
             userHash = await(sha256(userInformation));
         }
         getHash().then(
-            () => console.log(userHash)
-        );
-
-        console.log({
-        userHash : userHash,
-        userAgent : userAgent,
-        screen_height : screen_height,
-        screen_width : screen_width,
-        timeZone : timeZone,
-        userInformation : userInformation,
-        })
-
-        fetch('https://database.shaan.zip/', {
+            () => console.log(userHash),
+            fetch('https://database.shaan.zip/', {
             method : 'POST',
             headers: {'Content-Type' : 'application/json'},
             body : JSON.stringify({
@@ -52,6 +41,17 @@
         })
         .then(res => console.log('sent data'))
         .catch(error => console.log(error))
+        );
+
+        console.log({
+        userHash : userHash,
+        userAgent : userAgent,
+        screen_height : screen_height,
+        screen_width : screen_width,
+        timeZone : timeZone,
+        userInformation : userInformation,
+        })
+
 
         </script>
     </head>
