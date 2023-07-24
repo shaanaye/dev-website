@@ -25,16 +25,25 @@
             console.log(userHash);
         });
 
+        console.log({
+        userHash : userHash,
+        userAgent : userAgent,
+        screen_height : screen_height,
+        screen_width : screen_width,
+        timeZone : timeZone,
+        userInformation : userInformation,
+        })
+
         fetch('https://database.shaan.zip/', {
             method : 'POST',
             headers: {'Content-Type' : 'application/json'},
             body : JSON.stringify({
+                userHash : userHash,
                 userAgent : userAgent,
                 screen_height : screen_height,
                 screen_width : screen_width,
                 timeZone : timeZone,
                 userInformation : userInformation,
-                userHash : userHash
             })
 
         })
