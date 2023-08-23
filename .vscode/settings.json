@@ -34,5 +34,21 @@
         "c:\\Users\\shaan\\Desktop\\google-api-java-client\\libs\\opencensus-contrib-http-util-0.31.1.jar",
         "c:\\Users\\shaan\\Desktop\\google-api-java-client\\libs\\protobuf-java-3.21.2.jar",
         "c:\\Users\\shaan\\Desktop\\google-api-java-client\\libs\\xpp3-1.1.4c.jar"
+    ],
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "main",
+            "database": "website",
+            "username": "root",
+            "askForPassword": true
+        }
     ]
 }

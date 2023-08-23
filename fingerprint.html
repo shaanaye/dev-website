@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="fingerprint.css">
+        <script type="application/javascript">
+        function sha256(data) {
+            const encoder = new TextEncoder();
+            const dataUint8Array = encoder.encode(data);
+
+            return crypto.subtle.digest('SHA-256', dataUint8Array)
+            .then(buffer => {
+                const hashArray = Array.from(new Uint8Array(buffer));
+                const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+                return hashHex;
+            });
+        }
+
+        async function userData(){
+            var userAgent = navigator.userAgent;
+            var screen_height = window.screen.height;
+            var screen_width = window.screen.width;
+            var timeZone = new Date().getTimezoneOffset();
+            var userInformation = String(userAgent) + "|" + String(screen_width) + "|" + String(screen_height) + "|" + String(timeZone);
+
+            let userHash = await sha256(userInformation);
+            fetch('https://database.shaan.zip/', {
+            method : 'POST',
+            headers: {'Content-Type' : 'application/json'},
+            body : JSON.stringify({
+                userHash : userHash,
+                userAgent : userAgent,
+                screen_height : screen_height,
+                screen_width : screen_width,
+                timeZone : timeZone,
+                userInformation : userInformation,
+            })
+
+        })
+        .then(response => console.log("Sent data"))
+        .catch(error => console.log("Error " + error));
+
+        document.getElementById("tyMessage").innerHTML = "thank you!";
+        }
+
+
+
+
+        // let userHash;
+        // async function getHash() {
+        //     userHash = await(sha256(userInformation));
+        // }
+        // fetch('https://database.shaan.zip/', {
+        //     method : 'POST',
+        //     headers: {'Content-Type' : 'application/json'},
+        //     body : JSON.stringify({
+        //         userHash : userHash,
+        //         userAgent : userAgent,
+        //         screen_height : screen_height,
+        //         screen_width : screen_width,
+        //         timeZone : timeZone,
+        //         userInformation : userInformation,
+        //     })
+
+        // })
+        // .then(response => console.log("Sent data"))
+        // .catch(error => console.log("Error " + error));
+
+        // console.log({
+        // userHash : userHash,
+        // userAgent : userAgent,
+        // screen_height : screen_height,
+        // screen_width : screen_width,
+        // timeZone : timeZone,
+        // userInformation : userInformation,
+        // })
+
+
+        </script>
+    </head>
+
+    <body class="background-color">
+        <p id="tyMessage"></p>
+        <script>userData();</script>
+    </body>
+</html> 
