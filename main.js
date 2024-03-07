@@ -26,8 +26,8 @@ ambientLight.position.set(25,25,25);
 pointLight.position.set(25,25,25);
 scene.add(ambientLight, pointLight);
 
-const gridHelper = new THREE.GridHelper(200, 50);
-scene.add(gridHelper);
+// const gridHelper = new THREE.GridHelper(200, 50);
+// scene.add(gridHelper);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 
