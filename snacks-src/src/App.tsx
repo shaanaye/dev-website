@@ -403,11 +403,13 @@ function App() {
   if (mode === 'friend' && matchup) {
     return (
       <div className="container">
-        <h1>🤔 Guess Shaan's Preference</h1>
+        <h1>What would I prefer?</h1>
         <p className="progress">
           Round {totalGuesses + 1}/{FRIEND_TOTAL_ROUNDS} • Score: {score}
         </p>
-        <p className="subtitle">Which snack does Shaan prefer?</p>
+        <p className="subtitle">
+          Choose based on if I had an entire, bag, box, container, etc. of the item in front of me. What would I choose?
+          </p>
 
         <div className="matchup">
           <button
